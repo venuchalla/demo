@@ -5,15 +5,8 @@ tools {
         jdk 'jdk8'
     }
     stages {
-             stage ('Initialize') {
-                           steps {
-                              
-                           }
-            }
-
-           stage ('bulid') {
+                   stage ('bulid') {
                        steps {
-
                       mvn clean
                       mvn install
                     }
