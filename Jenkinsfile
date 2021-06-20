@@ -1,31 +1,17 @@
 pipeline {
     agent any
-
+tools {
+        maven 'Maven 3.3.9'
+        jdk 'jdk8'
+    }
     stages {
-    stage('clean') {
+    stage ('Initialize') {
                 steps {
-                    echo 'cleaning workspace..'
-                    mvn clean
-                    echo 'cleaning workspace completed'
+                    sh '''
+                        echo "PATH = ${PATH}"
+                        echo "M2_HOME = ${M2_HOME}"
+                    '''
                 }
-            }
-        stage('validate') {
-            steps {
-                echo 'validating.....'
-                 mvn validate
-                  echo 'validating is completed.....'
-            }
-        }
-        stage('Test') {
-            steps {
-                echo 'Testing..'
-                mvn test
-            }
-        }
-        stage('Deploy') {
-            steps {
-                echo 'Deploying....'
-                mvn install
             }
         }
     }
