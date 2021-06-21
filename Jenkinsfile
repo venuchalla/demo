@@ -8,8 +8,8 @@ tools {
                 stage ('bulid') {
                        steps {
                       echo "buliding"
-                     sh 'mvn clean'
-                     sh 'mvn install'
+                     bat """mvn clean"""
+                     bat""" mvn install"""
                     }
                 }
     }
