@@ -5,9 +5,11 @@ tools {
         jdk 'jdk8'
     }
     stages {
-                   stage ('bulid') {
+                stage ('bulid') {
                        steps {
                       echo "buliding"
+                      mvn clean
+                      mvn install
                     }
                 }
     }
