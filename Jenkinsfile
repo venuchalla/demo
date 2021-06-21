@@ -7,8 +7,7 @@ tools {
     stages {
                    stage ('bulid') {
                        steps {
-                      mvn clean
-                      mvn install
+                      echo "buliding"
                     }
                 }
     }
