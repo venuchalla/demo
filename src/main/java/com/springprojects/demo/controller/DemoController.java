@@ -11,4 +11,8 @@ public class DemoController {
     public String welcomeMethod() {
         return "welcome to demo controller";
     }
+    @GetMapping("/hello")
+    public String helloMethod() {
+        return "Hello User";
+    }
 }
