@@ -7,10 +7,16 @@ tools {
     stages {
                 stage ('bulid') {
                        steps {
-                      echo "buliding"
-                     bat """mvn clean"""
-                     bat""" mvn install"""
+                        echo "buliding"
+                        bat """mvn clean"""
+                        bat""" mvn install"""
                     }
                 }
+                 stage ('dockerimage-build') {
+                                       steps {
+                                        echo "docker image buliding"
+
+                                    }
+                                }
     }
 }
