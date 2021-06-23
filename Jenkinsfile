@@ -15,7 +15,7 @@ tools {
                  stage ('dockerimage-build') {
                                        steps {
                                         echo "docker image buliding"
-
+                                      bat """docker build ."""
                                     }
                                 }
     }
