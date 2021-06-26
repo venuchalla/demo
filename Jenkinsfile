@@ -12,7 +12,7 @@ tools {
                         bat""" mvn install"""
                     }
                 }
-                 stage ('dockerimage-build') {
+               stage ('dockerimage-build') {
                                        steps {
                                         echo "docker image buliding"
                                       bat """docker build ."""
