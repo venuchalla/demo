@@ -9,13 +9,13 @@ tools {
                        steps {
                         echo "buliding"
                         bat """mvn clean"""
-                        bat""" mvn install"""
+                        bat """ mvn install"""
                     }
                 }
                stage ('dockerimage-build') {
                                        steps {
                                         echo "docker image buliding"
-                                      bat """docker build ."""
+                                        bat """docker build ."""
                                     }
                                 }
     }
