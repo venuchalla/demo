@@ -16,13 +16,10 @@ tools {
                     }
                 }
                stage ('dockerimage-build') {
-                                       steps {
-                                        echo "docker image buliding"      
-                                    }
-                    when { expression { params.RELEASE } }
-                    steps {
-                        echo "relasing ...................."
-                    }
-                                }
+                                           steps {
+                                                echo "docker image buliding"      
+                                             }
+                   
+                                           }
     }
 }
